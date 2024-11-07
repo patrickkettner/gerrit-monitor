@@ -82,7 +82,7 @@ export function fetchUrl(path, params, headers = {}) {
         });
       }
 
-      const response = await fetch(path, {headers});
+      const response = await fetch(path, {credentials:"include", mode:"no-cors", headers});
       const statusCode = response.status;
       const responseText = await response.text();
 
